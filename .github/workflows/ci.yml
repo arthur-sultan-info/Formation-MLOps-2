@@ -28,6 +28,7 @@ jobs:
       - name: Run bdd tests
         run: behave tests/test_functional/features
       - name: Qualite
-        run: python -m pytest --cov=formation_indus_ds_avancee/ tests/test_unit/ -vv -p no:warnings
-        run: ./tests/tests_pyramid.sh
+        run: |
+          python -m pytest --cov=formation_indus_ds_avancee/ tests/test_unit/ -vv -p no:warnings
+          run: ./tests/tests_pyramid.sh
 
