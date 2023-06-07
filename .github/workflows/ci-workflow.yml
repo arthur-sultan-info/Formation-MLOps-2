@@ -1,4 +1,4 @@
-name: Python package 2
+name: Python package
 on:
   push:
   pull_request:
@@ -20,7 +20,9 @@ jobs:
       - name: Install dev dependencies
         run:  pip install -r requirements_test.txt
       - name: Run Linter
-        run: echo "Trainee should add command to run flake8"
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 .
       - name: Run Vulture
         run: echo "Trainee should add command to run vulture"
       - name: Run tests
