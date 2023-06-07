@@ -25,6 +25,9 @@ jobs:
           flake8 .
       - name: Run Vulture
         run: vulture .
+      - uses: AppThreat/sast-scan-action@master
+        with:
+          type: "python"
       - name: Run tests
         run: echo "Trainee should add command to run test"
 
