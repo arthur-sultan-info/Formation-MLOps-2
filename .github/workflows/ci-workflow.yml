@@ -24,7 +24,7 @@ jobs:
           # stop the build if there are Python syntax errors or undefined names
           flake8 .
       - name: Run Vulture
-        run: echo "Trainee should add command to run vulture"
+        run: vulture .
       - name: Run tests
         run: echo "Trainee should add command to run test"
 
